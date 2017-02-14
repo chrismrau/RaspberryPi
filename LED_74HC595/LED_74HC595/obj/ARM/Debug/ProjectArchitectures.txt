@@ -1,0 +1,1 @@
+C:\Users\Chris\Documents\GitHub\RaspberryPi\LED_74HC595\LED_74HC595\LED_74HC595.csproj;arm

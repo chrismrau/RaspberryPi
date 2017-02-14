@@ -1,0 +1,1 @@
+C:\Users\Chris\Documents\GitHub\RaspberryPi\Encoder\Encoder\Encoder.csproj;arm

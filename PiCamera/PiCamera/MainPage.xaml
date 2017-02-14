@@ -1,0 +1,73 @@
+﻿<Page x:Class="PiCamera.MainPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:local="using:PiCamera"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      mc:Ignorable="d">
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel HorizontalAlignment="Center"
+                    VerticalAlignment="Top">
+            <Canvas Name="PreviewCanvas"
+                    Grid.Row="1"
+                    Grid.Column="0"
+                    Width="200"
+                    Height="200"
+                    Background="Gray"
+                    Margin="0,0,0,0"
+                    Visibility="Visible">
+                <CaptureElement x:Name="PreviewElement"
+                                Width="200"
+                                Height="200"
+                                HorizontalAlignment="Left"
+                                Visibility="Visible" />
+            </Canvas>
+
+            <Button x:Name="CaptureButton"
+                    Content="Capture..."
+                    HorizontalAlignment="Center"
+                    Click="CaptureButton_OnClick" />
+
+            <TextBlock x:Name="RedText"
+                       Foreground="Red"
+                       FontSize="24" />
+            <TextBlock x:Name="GreenText"
+                       Foreground="Green"
+                       FontSize="24" />
+            <TextBlock x:Name="BlueText"
+                       Foreground="Blue"
+                       FontSize="24" />
+            <TextBlock x:Name="AlphaText"
+                       Foreground="Black"
+                       FontSize="24" />
+
+            <TextBlock x:Name="StatusText"
+                       FontSize="24" />
+
+        </StackPanel>
+
+        <StackPanel Grid.Column="1" 
+                    Orientation="Horizontal">
+            <Slider Header="White Balance"
+                    x:Name="WhiteBalSlider"
+                    Orientation="Vertical"/>
+            <Canvas Name="PhotoCanvas"
+                    Width="320"
+                    Height="240"
+                    Background="Gray"
+                    Margin="0,0,0,0"
+                    Visibility="Visible">
+                <Image x:Name="CaptureImage"
+                       Width="320"
+                       Height="240"
+                       Visibility="Visible" />
+            </Canvas>
+        </StackPanel>
+
+    </Grid>
+
+</Page>
